@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Land</title>
+</head>
+<body>
+  <section class="notesList">
+    <div class="logo">
+      <img src="./controller.png" alt="">
+      <h1>NOTE LAND</h1>
+    </div>
+    <div class="contents">
+    <!-- <div class="content">
+      <h4>Note Title</h4>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, unde?</p>
+    </div>
+    <div class="content">
+      <h4>Note Title</h4>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, unde?</p>
+    </div>
+    <div class="content">
+      <h4>Note Title</h4>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, unde?</p>
+    </div> -->
+  </div>
+    <div class="notes">
+      <button id="note">New Note</button>
+    </div>
+  </section>
+  <section class="right">
+    <div class="img">
+      <div class="bottom">
+        <img src="./wellknown-folder.webp" alt="">
+        <h4>No Notes found</h4>
+      <p>Add Some Notes From The Left Column</p>
+      </div>
+    </div>
+    
+    <div class="createNotes">
+      <!-- <div class="createNote">
+        <input type="text" class='input' placeholder="Note Title">
+      <textarea name="" id="" cols="30" rows="10">Note Discription</textarea>
+      </div>
+      <div class="buttoncreate">
+        <button class="createbutton">Create Note</button>
+      </div> -->
+    </div>
+  </section>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,600&family=Lato:wght@300;400;700&display=swap');
+  *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato';
+    box-sizing: border-box;
+  }
+  body{
+    display: flex;
+    background: #00b2e5;
+    width: 100vw;
+    height: 100vh;
+  }
+  .notesList{
+    width: 20%;
+    background: #ffce19;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .notesList img{
+    width: 2.3rem;
+    margin: 0.8rem 0.8rem ;
+  }
+  .right{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  .right img{
+    width: 33rem;
+    
+  }
+  
+  .right h4, p{
+    color: white;
+    margin: 0.8rem 0;
+    font-size: 1.0rem;
+  }
+  
+  .notes{
+    display: flex;
+    justify-content: center;
+  }
+  #note{
+    padding: 1rem;
+    border: none;
+    background: white;
+    border-radius: 12px;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 10rem;
+  }
+  .content{
+    width: 260px;
+    height: 125px;
+    border-radius: 12px;
+    background: white;
+    padding: 0 1rem;
+    margin: 0.6rem 0.8rem;
+  }
+  .content p{
+    color: rgb(65, 64, 64);
+  }
+  .content h4{
+    padding-top: 0.7rem;
+  }
+  .contents{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .createNote{
+    height: 260px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid darkgrey;
+    padding: 1rem;
+    width: 34vw;
+    margin: 1rem;
+    position: absolute;
+  }
+  .createNotes{
+   
+  }
+  input, textarea{
+  display: block;
+  outline: none;
+  border: none;
+  border-bottom: 1.6px solid #250250;
+  margin: 0.8rem 0;
+  width: 28vw;
+}
+.buttoncreate{
+  position: absolute;
+  margin-top: 30rem;
+}
+button{
+  border: none;
+  border-radius: 12px;
+  background: white;
+  padding: 1rem;
+  margin: 1rem;
+  
+}
+</style>
