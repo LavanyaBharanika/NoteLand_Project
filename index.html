@@ -47,6 +47,49 @@
         <button class="createbutton">Create Note</button>
       </div> -->
     </div>
+    <div class="editTheContent">
+      <div class="heading">
+        <div class="title">
+          <h4 id="editstitle"></h4>
+        </div>
+        <div class="clickbuttons">
+          <div class="editButton">
+            <button class="editButton">New Task</button>
+          </div>
+          <div class="deleteButton">
+            <button class="deleteButton">Delete Task</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="bodys">
+        <p id="editscontent">
+          <div id='formintro'>
+            <div class="secreatediv">
+              
+          <form id="form1" action="">
+            <div class="items">
+              <h4 style="color:black;">Task List</h4>
+              <p class="editoption">
+              <input type="radio"  name="radioOption" value="Project">Learning the Concepts</p>
+              <p class="editoption">
+                <input type="radio" name="radioOption" value="Project"> Practising the Assingnments</p>
+                <p class="editoption">
+                <input type="radio" name="radioOption" value="option1"> Working on Projects</p>
+              
+            <hr>
+            <p class="editoption">
+            <input id="input" type="checkbox">Learning HTML AND CSS</p>
+            <p class="editoption">
+            <input  id="input" type="checkbox">Project Review</p>
+            <p class="editoption">
+            <input  id="input" type="checkbox">Start Learning Javascript</p>
+          </form>
+        </div>
+        </div>
+        </p>
+      </div>
+    </div>
   </section>
   <script type="module" src="./main.js"></script>
 </body>
@@ -145,9 +188,7 @@
     margin: 1rem;
     position: absolute;
   }
-  .createNotes{
-   
-  }
+  
   input, textarea{
   display: block;
   outline: none;
@@ -168,4 +209,143 @@ button{
   margin: 1rem;
   
 }
+.editTheContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  position: absolute;
+  display: none;
+}
+.heading{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  height: 13vh;
+  background: white;
+  justify-content: space-between;
+  margin: 0.4rem;
+  width: 80%;
+  border-radius: 8px;
+  padding: 0.4rem;
+}
+.clickbuttons{
+  display: flex;
+  flex-direction: row;
+
+}
+.heading .title h4{
+  color: black;
+}
+.bodys{
+  width: 80%;
+  height: 70vh;
+  background: white;
+  margin: 0.4rem;
+  border-radius: 8px;
+  padding: 0.4rem;
+}
+.bodys p{
+  color: black;
+}
+.editButton button{
+  background: rgb(31, 222, 31);
+  height: 6vh;
+  color: white;
+}
+.deleteButton button{
+  background: tomato;
+  height: 6vh;
+  color: white;
+}
+#overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: #261c1c;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        z-index: 100;
+    }
+
+    #popup {
+        position: absolute;
+        top: 60%;
+        left: 60%;
+        /* background: #fff;
+        width: 500px;
+        height: 500px; */
+        margin-left: -250px; /*Half the value of width to center div*/
+        margin-top: -250px; /*Half the value of height to center div*/
+        z-index: 200;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .poptext{
+      background: white;
+      padding: 1.9rem;
+      border-radius: 2rem;
+      height: 6rem;
+      justify-content: center;
+      align-items: center;
+      
+      
+    }
+  
+   
+    #popbutton{
+      background: rgb(16, 215, 16);
+      color: white;
+    }
+    
+    #formintro{
+      display: none;
+      align-items: center;
+      width: 75%;
+      padding: 1rem 1rem;
+      margin: 2rem 3rem;
+      margin-left: 6rem;
+      height: 45vh;
+    }
+    .secreatediv{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      align-self: center;
+    }
+    .item label {
+            margin-right: 5px; 
+            display: inline-block; 
+          }
+.items input{
+  display: flex;
+  flex-direction: column;
+}
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 3px; /* You can adjust this value as needed */
+        }
+
+       .editoption{
+        margin: 0;
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+       }
+       .editoption input{
+       
+        padding: 1.8rem;
+       
+        width: 0.8rem;
+
+       }
+    
 </style>
